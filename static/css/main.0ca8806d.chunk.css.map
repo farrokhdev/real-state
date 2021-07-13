@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack://src/index.css"],"names":[],"mappings":"AAGA,MACE,gBAAgB,CAChB,gBAAgB,CAChB,gBAAgB,CAChB,gBAEF","file":"main.0ca8806d.chunk.css","sourcesContent":["\n/* globals ****\n***************/\n:root{\n  --color1:#3E50A4;\n  --color2:#8D8DB9;\n  --color3:#F9F8FF;\n  --color4:#F1F1E6;\n\n}"]}
