@@ -4,7 +4,7 @@ import { menuData } from '../data/MenuData';
 import { Button } from './Button';
 
 
-const Navbar = () => {
+const Navbar = ({toggle}) => {
     return (
      
         <Nav>
@@ -17,7 +17,7 @@ const Navbar = () => {
                  )
               })}
            </Menu>
-           <HamburgerMenu/>
+           <HamburgerMenu onClick={toggle}/>
            <Button to="/contact" primary="true">
               Contact Us
             </Button>

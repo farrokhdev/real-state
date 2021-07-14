@@ -23,7 +23,28 @@ const Hero = ({slides}) => {
 
     }
 
+    // useEffect(() => {
+    //     const nextSlide =()=>{
+    //      setIndex((index)=>{
+    //          let newIndex =index + 1;
+    //          return(checkIndex(newIndex))
+    //      });
+    //     }
+
+    //    timeout.current = setTimeout(nextSlide,3000);
+    //    return function (){
+    //        if(timeout.current){
+    //            clearTimeout(timeout.current);
+    //        }
+    //    }
+
+    //  }, [index , length])
+
     const nextSlide=()=>{
+        if(timeout.current){
+            clearTimeout(timeout.current);
+        }
+
         setIndex((index)=>{
             let newIndex =index + 1;
             return(checkIndex(newIndex))
@@ -32,6 +53,10 @@ const Hero = ({slides}) => {
         // console.log(index);
     }
     const prevSlide=()=>{
+        if(timeout.current){
+            clearTimeout(timeout.current);
+        }
+
         setIndex((index)=>{
             let newIndex =index - 1;
             return(checkIndex(newIndex))
@@ -40,6 +65,11 @@ const Hero = ({slides}) => {
         // console.log(index);
     }
     
+    if(!Array.isArray(slides) || slides.length <= 0){
+        return false;
+    }
+
+
     return (
         <>
         <HeroSec>
@@ -61,7 +91,8 @@ const Hero = ({slides}) => {
                                     <Price>
                                         {price}
                                     </Price>
-                                    <Button to={path} primary="true">
+                                    <Button to={path} primary="true"
+                                    show="true">
                                         {label}
                                         <Arrow/>
                                     </Button>

@@ -63,8 +63,13 @@ const SlideImgWrap=styled.div`
         top: 0;
         left: 0;
         opacity: 0.5;
-        background: linear-gradient(90deg, rgba(0,0,0,0.2) 0%, rgba(0,0,0,1) 100%);
+        background: linear-gradient(90deg, rgba(0,0,0,0.8) 0%, rgba(0,0,0,5) 100%);
         overflow: hidden;
+        pointer-events: none;
+        -webkit-user-select: none; /* Safari */
+        -moz-user-select: none; /* Firefox */
+        -ms-user-select: none; /* IE10+/Edge */
+        user-select: none; /* Standard */
         
     }
 
@@ -74,6 +79,11 @@ const SlideImg=styled.img`
     height: 100%;
     object-fit: cover;
     object-position: center;
+    pointer-events: none;
+    -webkit-user-select: none; /* Safari */
+    -moz-user-select: none; /* Firefox */
+    -ms-user-select: none; /* IE10+/Edge */
+    user-select: none; /* Standard */
 `;
 
 const SlideContent=styled.div`
@@ -88,6 +98,7 @@ const SlideContent=styled.div`
     gap: 30px;
     padding:${descPadding};
 
+
     @media screen and (max-width: 736px) {
       padding: ${mobilePadding};
    }
@@ -97,13 +108,27 @@ const Title=styled.h1`
     font-weight: ${fontBold};
     color: ${color4};
     text-transform: uppercase;
+    letter-spacing: 1px;
+
+    @media screen and (max-width: 736px) {
+      font-size: ${font2};
+   }
     
 `;
 const Price=styled.h3`
-    font-size: ${font5};
-    font-weight: ${fontNormal};
+    font-size: ${font4};
+    font-weight: ${fontSemi};
     color: ${color4};
+
+    @media screen and (max-width: 736px) {
+      font-size: ${font5};
+   }
+    
+
 `;
+
+
+
 const Arrow=styled(BsArrowRight)`
     font-size: ${fontp};
     margin-left: 5px;
@@ -120,6 +145,11 @@ const SliderButtons = styled.div`
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
+
+    @media screen and (max-width: 736px) {
+        right: 40px;
+        bottom: 40px;
+   }
 `;
 
 const slidebtn = css`
@@ -136,6 +166,11 @@ const slidebtn = css`
     color: ${color1};
     background: ${color4};
     }
+
+    @media screen and (max-width: 736px) {
+        width: 35px;
+        height: 35px;
+   }
 
     
 `;

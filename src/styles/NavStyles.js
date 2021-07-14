@@ -62,6 +62,7 @@ const HamburgerMenu =styled(HiMenuAlt3)`
    font-size: ${font4};
    color: ${color4};
    display: none;
+   cursor: pointer;
    @media screen and (max-width: 736px) {
       display: block;
    }
