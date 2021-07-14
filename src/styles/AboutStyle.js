@@ -4,9 +4,11 @@ import { fontSize,colors, Padding, fontWeight } from "./Variables";
 
 const AboutSec = styled.section`
     width: 100%;
-    min-height: 500px;
+    /* min-height: 500px; */
     background-color: ${colors.colorWhite};
     padding: ${Padding.descSecPadding};
+    max-width: 1200px;
+    margin:0 auto;
 
 
 
@@ -26,8 +28,6 @@ const AboutContent = styled.div`
     display: grid;
     grid-template-columns: 2fr 1fr;
     gap: 50px;
-    
-
 `;
 const AboutParagraph = styled.div`
     
@@ -39,8 +39,7 @@ const AboutParagraph = styled.div`
     }
 `;
 const AboutImage = styled.div`
-    height: 300px;
-    width: 300px;
+    
     /* overflow: hidden; */
     position: relative;
     z-index: 2;
