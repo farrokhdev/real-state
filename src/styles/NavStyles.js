@@ -3,10 +3,17 @@ import {colors,fontSize ,fontWeight,Padding} from './Variables';
 import { Link, NavLink } from 'react-router-dom';
 import { HiMenuAlt3 } from "react-icons/hi";
 
+
+
 const{color1 , color2 ,color3,color4}=colors;
 const{font1,font2,font3,font4,font5,fontp}=fontSize;
 const{fontBlack,fontBold,fontSemi,fontNormal,fontLight,fontExLight}=fontWeight;
 const{mobilePadding,descPadding}=Padding;
+
+
+
+
+
 
 
 const Nav = styled.nav`
@@ -16,10 +23,11 @@ const Nav = styled.nav`
    justify-content: space-between;
    align-items: center;
    padding:${descPadding};
-   position: fixed;
+   position:${({navBg})=>(navBg ? "block" : "fixed")};
+ 
    width: 100%;
    z-index: 100;
-
+   background-color:${({navBg})=>(navBg ? color1 : "transparent")};
    @media screen and (max-width: 736px) {
       padding: ${mobilePadding};
    }
@@ -56,6 +64,9 @@ const MenuLinks = styled(Link)`
    text-transform: capitalize;
    letter-spacing: 0.5px;
    cursor: pointer;
+   position: relative;
+   padding: 5px;
+   transition: 0.3s ease;
 `;
 
 const HamburgerMenu =styled(HiMenuAlt3)`

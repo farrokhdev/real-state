@@ -91,7 +91,7 @@ const Hero = ({slides}) => {
                                     <Price>
                                         {price}
                                     </Price>
-                                    <Button to={path} primary="true"
+                                    <Button to={path}
                                     show="true">
                                         {label}
                                         <Arrow/>

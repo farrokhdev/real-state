@@ -113,6 +113,9 @@ const Title=styled.h1`
     @media screen and (max-width: 736px) {
       font-size: ${font2};
    }
+    @media screen and (max-width: 500px) {
+      font-size: ${font3};
+   }
     
 `;
 const Price=styled.h3`
@@ -122,6 +125,9 @@ const Price=styled.h3`
 
     @media screen and (max-width: 736px) {
       font-size: ${font5};
+   }
+   @media screen and (max-width: 500px) {
+      font-size: ${fontp};
    }
     
 

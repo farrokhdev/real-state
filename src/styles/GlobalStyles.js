@@ -1,8 +1,7 @@
 import { createGlobalStyle } from "styled-components";
-import { fontSize,colors, Padding, fontWeight } from "./Variables";
+import { fontSize, colors, Padding, fontWeight } from "./Variables";
 
-
-const GlobalStyle =createGlobalStyle`
+const GlobalStyle = createGlobalStyle`
 
 * ,
 *::before,
@@ -16,6 +15,7 @@ const GlobalStyle =createGlobalStyle`
   background-color:#3E50A4 ;
 }
 
+
 /* font raleway */
 
 
@@ -26,7 +26,6 @@ body{
 a{
   text-decoration:none;
 }
-
 
 .section-title{
   width:fit-content;
@@ -49,6 +48,17 @@ a{
   font-size: ${fontSize.font3};
   font-weight: ${fontWeight.fontSemi};
   color:${colors.colorBlack}
+}
+
+@media screen and (max-width:700px){
+  .section-title h2{
+  font-size: ${fontSize.font4};
+}
+}
+@media screen and (max-width:500px){
+  .section-title h2{
+  font-size: ${fontSize.font5};
+}
 }
 
 

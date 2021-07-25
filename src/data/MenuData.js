@@ -1,5 +1,5 @@
 export const menuData=[
-    {title :"home", link :"/home"},
+    {title :"home", link :"/"},
     {title :"About", link :"/about"},
     {title :"States", link :"/states"}
 ]
